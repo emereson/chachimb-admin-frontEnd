@@ -5,14 +5,20 @@ import Header from './pages/Header';
 import Users from './pages/Users';
 import ProtectedRoutes from './utils/ProtecteRoutes';
 import Universities from './pages/Universities';
+import { ToastContainer } from 'react-toastify';
+import './pages/pagesStyle/create.css';
+import './pages/pagesStyle/pages.css';
+import 'react-toastify/dist/ReactToastify.css';
+import University from './pages/University';
 
 function App() {
   const userDataJSON = localStorage.getItem('userData'); // Obtener la cadena JSON de localStorage
   const userData = JSON.parse(userDataJSON);
 
-  console.log(userData);
   return (
     <>
+      <ToastContainer />
+
       <Header userData={userData} />
       <Routes>
         <Route path="/log-in" element={<Login />} />
@@ -20,6 +26,7 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/users" element={<Users />} />
           <Route path="/universities" element={<Universities />} />
+          <Route path="/university/:id" element={<University />} />
 
           {/* <Route path="/" element={<Home />} /> */}
           {/* <Route path="/register" element={<Register />} /> */}

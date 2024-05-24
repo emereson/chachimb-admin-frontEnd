@@ -1,0 +1,52 @@
+.Universities__cardsContainer {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.Universities__card {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(222, 222, 222);
+}
+
+
+.Universities__card h3 {
+    color: var(--text-color-black);
+}
+
+.Universities__card h4 {
+    margin-top: -10px;
+    color: var(--text-color-gray);
+    text-align: center;
+    font-size: 16px;
+}
+
+.Universities__card button {
+    width: 150px;
+    padding: 13px;
+    font-size: 16px;
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1.5px solid var(--body-black);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.Universities__card button:hover {
+    background-color: var(--body-white);
+    color: var(--text-color-black);
+
+}

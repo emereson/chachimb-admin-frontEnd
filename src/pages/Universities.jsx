@@ -1,17 +1,24 @@
 import React from 'react';
-
+import CreateUniversity from '../Components/universities/cruds/CreateUniversity';
+import { useState } from 'react';
+import HomeUniversity from '../Components/universities/HomeUniversity';
+import './pagesStyle/Universities.css';
 const Universities = () => {
+  const [viewContainer, setViewContainer] = useState('home');
+
+  console.log(viewContainer);
   return (
-    <div>
-      <section>
-        <h1>Tus Universidades</h1>
-        <button>Agregar Universidad</button>
-      </section>
-      <section>
-        <article></article>
-        <div></div>
-      </section>
-    </div>
+    <>
+      {viewContainer === 'home' && (
+        <HomeUniversity
+          setViewContainer={setViewContainer}
+          viewContainer={viewContainer}
+        />
+      )}
+      {viewContainer === 'create' && (
+        <CreateUniversity setViewContainer={setViewContainer} />
+      )}
+    </>
   );
 };
 
