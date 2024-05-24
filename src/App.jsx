@@ -3,6 +3,8 @@ import Login from './pages/Login';
 import { Route, Routes } from 'react-router-dom';
 import Header from './pages/Header';
 import Users from './pages/Users';
+import ProtectedRoutes from './utils/ProtecteRoutes';
+import Universities from './pages/Universities';
 
 function App() {
   const userDataJSON = localStorage.getItem('userData'); // Obtener la cadena JSON de localStorage
@@ -14,12 +16,14 @@ function App() {
       <Header userData={userData} />
       <Routes>
         <Route path="/log-in" element={<Login />} />
-        <Route path="/users" element={<Users />} />
-        {/* <Route path="/register" element={<Register />} />
 
         <Route element={<ProtectedRoutes />}>
-          <Route path="/" element={<Home />} />
-        </Route> */}
+          <Route path="/users" element={<Users />} />
+          <Route path="/universities" element={<Universities />} />
+
+          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/register" element={<Register />} /> */}
+        </Route>
       </Routes>
     </>
   );

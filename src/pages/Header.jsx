@@ -11,7 +11,11 @@ const Header = ({ userData }) => {
     setUrl(location.pathname);
   }, [location.pathname]);
 
-  console.log(viewHeader);
+  const closeSesion = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userData');
+    window.location.href = '/#/log-in';
+  };
 
   return (
     <header
@@ -27,8 +31,8 @@ const Header = ({ userData }) => {
       >
         <i class="bx bxs-user-circle"></i>
         <p>
-          {userData.name.toUpperCase()}{' '}
-          {userData.lastName.toUpperCase()}
+          {userData?.name?.toUpperCase()}{' '}
+          {userData?.lastName?.toUpperCase()}
         </p>
       </section>
       <section className="header_sectionTwo">
@@ -36,7 +40,7 @@ const Header = ({ userData }) => {
           <i class="bx bxs-school"></i>
           <p>Universidades</p>
         </Link>
-        <Link className="header_sectionTwo_link" to="/register">
+        <Link className="header_sectionTwo_link" to="/users">
           <i class="bx bxs-user"></i>
           <p>Usuarios</p>
         </Link>
@@ -45,7 +49,7 @@ const Header = ({ userData }) => {
           <p>Administradores</p>
         </Link>
 
-        <a className="header_sectionTwo_link">
+        <a className="header_sectionTwo_link" onClick={closeSesion}>
           <i class="bx bxs-door-open"></i>
           <p>Cerrar sesión</p>
         </a>
