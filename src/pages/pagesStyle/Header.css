@@ -1,5 +1,6 @@
 .header_container {
   width: 80px;
+  min-width: 0px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,13 +8,15 @@
   align-items: start;
   background-color: var(--body-black);
   gap: 50px;
-  transition: 0.5s ease;
   padding: 30px;
   overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .header_viewContainer {
-  width: 300px;
+  width: 300px !important;
+  min-width: 300px;
+
 }
 
 .header_sectionOne {

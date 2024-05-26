@@ -1,8 +1,8 @@
 import React from 'react';
 import CreateUniversity from '../Components/universities/cruds/CreateUniversity';
 import { useState } from 'react';
-import HomeUniversity from '../Components/universities/HomeUniversity';
 import './pagesStyle/Universities.css';
+import HomeUniversities from '../Components/universities/HomeUniversities';
 const Universities = () => {
   const [viewContainer, setViewContainer] = useState('home');
 
@@ -10,7 +10,7 @@ const Universities = () => {
   return (
     <>
       {viewContainer === 'home' && (
-        <HomeUniversity
+        <HomeUniversities
           setViewContainer={setViewContainer}
           viewContainer={viewContainer}
         />

@@ -1,9 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './pagesStyle/University.css';
+import HomeUniversity from '../Components/university/HomeUniversity';
+import CreateExam from '../Components/university/cruds/CreateExam';
 
 const University = () => {
   const { id } = useParams();
+  const [viewContainer, setViewContainer] = useState('home');
   const [dataUniversity, setDataUniversity] = useState();
 
   useEffect(() => {
@@ -18,17 +22,20 @@ const University = () => {
   console.log(dataUniversity);
 
   return (
-    <div className="pages_container">
-      <section className="pages_sectionOne">
-        <h1>{dataUniversity?.name}</h1>
-        <button onClick={() => setViewContainer('create')}>
-          Agregar Universidad
-        </button>
-      </section>
-      <section>
-        <h2>EXAMENES</h2>
-      </section>
-    </div>
+    <>
+      {viewContainer === 'home' && (
+        <HomeUniversity
+          dataUniversity={dataUniversity}
+          setViewContainer={setViewContainer}
+        />
+      )}
+      {viewContainer === 'create' && (
+        <CreateExam
+          setViewContainer={setViewContainer}
+          dataUniversity={dataUniversity}
+        />
+      )}
+    </>
   );
 };
 

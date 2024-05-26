@@ -1,0 +1,80 @@
+.University_container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.University_sectionOne {
+    width: 100%;
+    height: 80px;
+    background-color: var(--body-darkBlue);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.University_sectionOne button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    height: 45px;
+    background-color: transparent;
+    color: var(--text-color-white);
+    cursor: pointer;
+
+}
+
+.University_sectionOne i {
+    font-size: 30px;
+}
+
+/* University_sectionTwo */
+.University_sectionTwo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.University_sectionTwo_article {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.University_sectionTwo_article h1 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color-black);
+}
+
+.University_sectionTwo_article img {
+    width: 60px;
+    height: 60px;
+}
+
+.University_sectionTwo_button {
+    width: 150px;
+    height: 55px;
+    background-color: var(--body-white);
+    color: var(--text-color-black);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--body-black);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.University_sectionTwo_button:hover {
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+
+}

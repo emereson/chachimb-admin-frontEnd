@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './universitiesStyle/HomeUniversities.css';
 
-const HomeUniversity = ({ viewContainer, setViewContainer }) => {
+const HomeUniversities = ({ viewContainer, setViewContainer }) => {
   const [universities, setUniversities] = useState();
   const navigate = useNavigate();
 
@@ -14,11 +15,10 @@ const HomeUniversity = ({ viewContainer, setViewContainer }) => {
       .then((res) => setUniversities(res.data.universities))
       .catch((err) => console.log(err));
   }, [viewContainer]);
-  console.log(universities);
 
   return (
-    <div className="pages_container">
-      <section className="pages_sectionOne">
+    <div className="HomeUniversity_container">
+      <section className="HomeUniversity_sectionOne">
         <h1>Tus Universidades</h1>
         <button onClick={() => setViewContainer('create')}>
           Agregar Universidad
@@ -47,4 +47,4 @@ const HomeUniversity = ({ viewContainer, setViewContainer }) => {
   );
 };
 
-export default HomeUniversity;
+export default HomeUniversities;

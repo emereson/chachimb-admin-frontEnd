@@ -1,0 +1,156 @@
+.ExamsUniversity_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
+    gap: 20px;
+}
+
+.ExamsUniversity_container h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ExamsUniversity_sectionOne */
+
+
+.ExamsUniversity_sectionOne {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ExamsUniversity_examContianer {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ExamsUniversity_exam_data {
+    width: 100%;
+    color: var(--text-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 5px;
+    background-color: var(--body-black);
+    border-radius: 10px;
+}
+
+.ExamsUniversity_exam_data h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ExamsUniversity_exam_data h4 {
+    font-size: 24px;
+}
+
+.ExamsUniversity_exam_data p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ExamsUniversity_exam_buttons {
+    position: absolute;
+    top: 95%;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--body-black);
+    border-top: 1px solid var(--body-white);
+    border-radius: 0 0 10px 10px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.ExamsUniversity_exam_viewButtons {
+    top: 97%;
+    z-index: 1;
+    opacity: 1;
+}
+
+.ExamsUniversity_exam_buttons button {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--body-white);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.ExamsUniversity_exam_buttons button:hover {
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+}
+
+
+
+/* Universities__cardsContainer */
+
+.Universities__cardsContainer {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.Universities__card {
+    width: 250px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(222, 222, 222);
+}
+
+.Universities__card img {
+    height: 150px;
+    width: 150px;
+}
+
+
+.Universities__card h3 {
+    color: var(--text-color-black);
+}
+
+.Universities__card h4 {
+    margin-top: -10px;
+    color: var(--text-color-gray);
+    text-align: center;
+    font-size: 16px;
+}
+
+.Universities__card button {
+    width: 150px;
+    padding: 13px;
+    font-size: 16px;
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1.5px solid var(--body-black);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.Universities__card button:hover {
+    background-color: var(--body-white);
+    color: var(--text-color-black);
+
+}

@@ -10,6 +10,7 @@ import './pages/pagesStyle/create.css';
 import './pages/pagesStyle/pages.css';
 import 'react-toastify/dist/ReactToastify.css';
 import University from './pages/University';
+import School from './pages/School';
 
 function App() {
   const userDataJSON = localStorage.getItem('userData'); // Obtener la cadena JSON de localStorage
@@ -27,6 +28,7 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/universities" element={<Universities />} />
           <Route path="/university/:id" element={<University />} />
+          <Route path="/school/:id" element={<School />} />
 
           {/* <Route path="/" element={<Home />} /> */}
           {/* <Route path="/register" element={<Register />} /> */}
